@@ -1,0 +1,89 @@
+body {
+	margin: auto 0;
+}
+.header, .footer {
+	background: #444;
+	color: #eee;
+	text-align: center;
+	font-size: 32pt;
+	font-family: arial;
+	font-weight: bold;
+	padding: 15px 0;
+}
+.header a {
+	color: #eee;
+	text-decoration: none;
+}
+.footer {
+	font-size: 18pt;
+}
+.header-menu {
+	display: block;
+	text-align: center;
+	list-style: none;
+	margin: 0;
+}
+.header-menu li {
+	background: #444;
+	color: #fff;
+	display: inline-block;
+	padding: 5px;
+	border: 1px ridge #fff;
+	margin-left: -5px;
+	cursor: pointer;
+}
+.header-menu li a {
+	color: inherit;
+	text-decoration: none;
+}
+.header-menu li:hover, .header-menu li a:hover {
+	background: #fff;
+	color: inherit;
+}
+.content {
+	text-align: center;
+	min-height: 600px;
+	padding: 20px 0;
+}
+table.list th, table.list td {
+	border: 1px ridge #ddd;
+	padding: 3px;
+	margin: 5px;
+}
+table.list {
+	margin: 0 auto;
+	text-align: left;
+}
+table.list .filename {
+	min-width: 20em;
+}
+table.list .size {
+	min-width: 5em;
+}
+.uploading {
+	display: inline-block;
+	text-align: left;
+}
+.file-field {
+	border: 1px ridge #999;
+	padding: 10px;
+	margin: 10px 0;
+}
+#add-more-button {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.comment {
+	width: 100%;
+	resize: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.submit {
+	float: right;
+}
+.file-change {
+	background: #fff;
+}
