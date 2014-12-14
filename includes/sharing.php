@@ -25,8 +25,8 @@ class Sharing {
 			$uploadingFile = $uploadDir . 'safety_name';
 			$uploadResponse = new UploadResponse;
 			$uploadResponse->fileName = $fileName;
-			if ($files['size'][$key] > 500000) $uploadResponse->errors[] = 'File size too large';
-			if (empty($errors)) {
+			if ($files['size'][$key] > 62914560 || $files['size'][$key] == 0) $uploadResponse->errors[] = 'Too large file';
+			if (empty($uploadResponse->errors)) {
 				if (move_uploaded_file($files['tmp_name'][$key], $uploadingFile)) {
 					$dbPrepared = $this->database->db->prepare('INSERT INTO files (fileName, uploadingDatetime, size, comment) VALUES (?,?,?,?)');
 					$dbPrepared->execute(array($fileName, date("Y-m-d H:i:s"), $files['size'][$key], $_POST['comments'][$key]));
@@ -39,7 +39,7 @@ class Sharing {
 						$uploadResponse->id = $id;
 						$uploadResponse->isSuccess = true;
 					}
-				} else $uploadResponse->errors[] = 'Unknown error';
+				} else $uploadResponse->errors[] = "Unknown error";
 			}
 			$responseArray[] = $uploadResponse;
 		}

@@ -8,3 +8,6 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
+php_flag upload_max_filesize 60M
+php_flag post_max_size 65M
+php_flag max_input_time -1

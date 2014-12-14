@@ -1,7 +1,7 @@
 body {
 	margin: auto 0;
 }
-.header, .footer {
+header, footer {
 	background: #444;
 	color: #eee;
 	text-align: center;
@@ -10,9 +10,15 @@ body {
 	font-weight: bold;
 	padding: 15px 0;
 }
-.header a {
+footer {
+	font-size: 18pt;
+}
+header a, footer a {
 	color: #eee;
 	text-decoration: none;
+}
+footer a:hover {
+	text-decoration: underline;
 }
 .footer {
 	font-size: 18pt;
@@ -40,10 +46,41 @@ body {
 	background: #fff;
 	color: inherit;
 }
-.content {
+#content {
 	text-align: center;
 	min-height: 600px;
 	padding: 20px 0;
+}
+.file-title #filename {
+	font-size:18pt;
+	font-weight: bold;
+}
+.file-title #size {
+	font-size: 16pt;
+	color: #777;
+}
+.file-content img {
+	max-width: 50em;
+	max-height: 500em;
+}
+#download {
+	padding: 5px;
+	margin-top: 5px;
+}
+#download a {
+	border: 1px solid #444;
+	color: inherit;
+	text-decoration: none;
+	font-size: 1.1em;
+	padding: 5px;
+	background: #eee;
+}
+#download a:hover {
+	text-decoration: underline;
+}
+#id {
+	font-size: 0.8em;
+	margin-bottom: 10px;
 }
 table.list th, table.list td {
 	border: 1px ridge #ddd;

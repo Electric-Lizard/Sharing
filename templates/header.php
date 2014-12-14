@@ -8,9 +8,9 @@
 <title>Sharing</title>
 </head>
 <body>
-<div class="header"><a href="<?PHP echo APP_URL; ?>">Test sharing on slim framework</a></div>
+<header><a href="<?PHP echo APP_URL; ?>">Sharing demo</a></header>
 <ul class="header-menu">
 	<li><a href="<?PHP echo APP_URL; ?>">Upload file</a></li>
-	<li><a href="<?PHP echo APP_URL.'/files/'; ?>">Show last files</a></li>
+	<li><a href="<?PHP echo APP_URL.'files/'; ?>">Show last files</a></li>
 </ul>
-<div class="content">
+<div id="content">

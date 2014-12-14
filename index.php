@@ -23,4 +23,9 @@ $app->post('/upload/', function() use ($app) {
 	$responseArray = $app->sharing->uploadFiles($_FILES['userFiles']);
 	$app->render('uploading_response_temp.php', array('responseArray' => $responseArray));
 });
+$app->get('/download/(:id)', function($id) use ($app) {
+	$fileInfo = $app->sharing->getFileInfo($id);
+	header("Content-Disposition: attachment; filename=\"{$fileInfo['fileName']}\"");
+	header("Location: ./uploads/{$fileInfo['id']}/safety_name");
+});
 $app->run();
