@@ -90,6 +90,7 @@ table.list th, table.list td {
 table.list {
 	margin: 0 auto;
 	text-align: left;
+	border-collapse: collapse;
 }
 table.list .filename {
 	min-width: 20em;

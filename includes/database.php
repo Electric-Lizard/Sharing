@@ -1,7 +1,7 @@
 <?php
 class Database {
 	public function __construct() {
-		$host = $this->host = "localhost";
+		$host = $this->host = "mysql.hostinger.ru";
 		$dbname = $this->dbname = "foo";
 		$username = $this->username = "bar";
 		$password = $this->password = "baz";
