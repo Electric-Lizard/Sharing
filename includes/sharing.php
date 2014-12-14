@@ -22,6 +22,9 @@ class Sharing {
 		foreach ($files['name'] as $key => $fileName) {
 			if (empty($fileName)) continue;
 			$uploadDir = 'uploads/';
+			if (!file_exists('uploads')) {
+				mkdir('uploads', 0777, true);
+			}
 			$uploadingFile = $uploadDir . 'safety_name';
 			$uploadResponse = new UploadResponse;
 			$uploadResponse->fileName = $fileName;
